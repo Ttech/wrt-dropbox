@@ -1,0 +1,6 @@
+#!/bin/sh 
+DDNSPING=""
+/bin/wget -q "${DDNSPING}" -O/dev/null &
+/usr/sbin/iptables-restore /etc/iptables/rules.v4
+#/usr/sbin/ip6tables-restore /etc/iptables/rules.v6 2>/dev/null
+exit 0
